@@ -40,10 +40,19 @@ def bfs_linear_algebra (adjacency_matrix: list, start: int, finish: int) -> int:
     neighbors = np.zeros(n)
     neighbors[start] = 1
 
-    for i in range(n):
+    # this defines a vectorized function for the ~ operation. It will flip each bit of an array
+    invert = np.vectorize(lambda x: int(not x))
+
+    for i in range(1, n):
+        # This line does several steps at once
+        # First, it extracts the neighbors using np.matmul() which is numpy's matrix multiplication function
+        # Then, it converts the result to integers, otherwise, the & operation won't work
+        # Then, it inverts the vector from the previous step and &'s it with the new vector, this removes all repeated vertices
+        # from previous steps
+        neighbors = np.matmul(adjacency_matrix, neighbors).astype(int) & invert(neighbors)
+
         if neighbors[finish]: # if this isn't a 0, the finishing vertex is connected to start
-            return i
-        neighbors = np.matmul(adjacency_matrix, neighbors) # multiplies the adjacency matrix by the neighbors vector
+            return i   
     return 0
 
 # runs each test case in a loop

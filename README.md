@@ -1,5 +1,5 @@
 # Breadth-First Search with Linear Algebra Methods
-An implementation of a rudimentary Breadth-First Search using Linear Algebra Methods. The script is based on [this paper](https://ieeexplore.ieee.org/document/7046157) and implements a modified, rudimentary, version using repeated matrix multiplication to determine if a path exists between two vertices, and the number of steps involved. Additional resources related to this topic include the book Graph Algorithms in the Language of Linear Algebra by Jeremy Kepner and John Gilbert. I uploaded this small script here as a part of an assignment for linear algebra.
+An implementation of a rudimentary Breadth-First Search using Linear Algebra Methods. The script is based on [this paper](https://ieeexplore.ieee.org/document/7046157) and implements a modified, rudimentary, version using repeated matrix multiplication to determine if a path exists between two vertices, and the number of steps involved. Additional resources related to this topic include the book Graph Algorithms in the Language of Linear Algebra by Jeremy Kepner and John Gilbert. I uploaded this small script here as a part of an assignment for Linear Algebra 1 at OSU.
 
 Bilbliography:
 

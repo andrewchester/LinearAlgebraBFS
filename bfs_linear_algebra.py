@@ -43,7 +43,7 @@ def bfs_linear_algebra (adjacency_matrix: list, start: int, finish: int) -> int:
     # this defines a vectorized function for the ~ operation. It will flip each bit of an array
     invert = np.vectorize(lambda x: int(not x))
 
-    for i in range(1, n):
+    for i in range(n):
         # This line does several steps at once
         # First, it extracts the neighbors using np.matmul() which is numpy's matrix multiplication function
         # Then, it converts the result to integers, otherwise, the & operation won't work
